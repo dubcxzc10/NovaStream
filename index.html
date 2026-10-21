@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080810">
+  <title>NovaStream</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #080810;
+      color: white;
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+    header {
+      padding: 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 24px;
+      font-weight: 800;
+    }
+    .logo {
+      background: linear-gradient(135deg, #5877ff, #963fff);
+      padding: 10px 13px;
+      border-radius: 14px;
+    }
+    .accent { color: #9a83ff; }
+    nav {
+      display: flex;
+      gap: 24px;
+      padding: 0 24px 20px;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    nav a { color: #ccc9d8; text-decoration: none; }
+    nav a:first-child { color: white; }
+    .hero {
+      min-height: 440px;
+      padding: 100px 28px 40px;
+      background: radial-gradient(ellipse at 80% 25%, #31206c, transparent 55%),
+                  linear-gradient(0deg, #080810, transparent);
+    }
+    .tag { color: #aa96ff; letter-spacing: 3px; }
+    h1 { font-size: clamp(42px, 10vw, 76px); margin: 24px 0; }
+    p { color: #c8c6d2; line-height: 1.7; max-width: 560px; }
+    button {
+      border: 0;
+      border-radius: 12px;
+      padding: 15px 20px;
+      margin: 10px 8px 10px 0;
+      font-size: 16px;
+      font-weight: 700;
+    }
+    .primary { color: white; background: linear-gradient(100deg, #5877ff, #963fff); }
+    .secondary { color: white; background: #24232d; }
+    h2 { padding: 0 24px; }
+    .cards {
+      display: flex;
+      gap: 14px;
+      padding: 0 24px 40px;
+      overflow-x: auto;
+    }
+    .card {
+      min-width: 145px;
+      height: 205px;
+      border-radius: 14px;
+      padding: 12px;
+      display: flex;
+      align-items: end;
+      font-weight: 700;
+      background: linear-gradient(0deg, #090911, transparent),
+                  linear-gradient(135deg, #182b60, #7650a7);
+    }
+    .card:nth-child(2) { background: linear-gradient(135deg, #143d56, #8c4a76); }
+    .card:nth-child(3) { background: linear-gradient(135deg, #5e241b, #c18a44); }
+    .card:nth-child(4) { background: linear-gradient(135deg, #172b37, #52558b); }
+  </style>
+</head>
+<body>
+  <header><span class="logo">▶</span> NOVA<span class="accent">STREAM</span></header>
+  <nav>
+    <a href="#inicio">Início</a>
+    <a href="#filmes">Filmes</a>
+    <a href="#series">Séries</a>
+    <a href="#lista">Minha Lista</a>
+  </nav>
+  <main>
+    <section class="hero" id="inicio">
+      <span class="tag">✦ A TUA PRÓXIMA HISTÓRIA</span>
+      <h1>O cinema<br><span class="accent">começa aqui.</span></h1>
+      <p>Descobre mundos novos, grandes histórias e as tuas próximas séries favoritas.</p>
+      <button class="primary" onclick="document.querySelector('#filmes').scrollIntoView({behavior:'smooth'})">▶ Explorar filmes</button>
+      <button class="secondary" onclick="alert('A tua lista pessoal chegará numa próxima versão!')">＋ Minha Lista</button>
+    </section>
+    <h2 id="filmes">Escolhas Nova</h2>
+    <div class="cards">
+      <div class="card">Horizonte Azul</div>
+      <div class="card">Noite Neon</div>
+      <div class="card">Última Órbita</div>
+      <div class="card">Código Zero</div>
+    </div>
+    <h2 id="series">Séries em destaque</h2>
+    <div class="cards">
+      <div class="card">Além do Tempo</div>
+      <div class="card">Cidade Sombria</div>
+      <div class="card">Novo Mundo</div>
+    </div>
+    <h2 id="lista">A tua próxima sessão começa aqui.</h2>
+  </main>
+</body>
+</html>
